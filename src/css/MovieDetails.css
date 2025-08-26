@@ -1,0 +1,151 @@
+.movie-details {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.movie-details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(14px);
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.details-poster img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.details-poster img:hover {
+  transform: scale(1.05);
+}
+
+.details-info {
+  flex: 1;
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.details-info:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.details-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #66ccff;
+  font-weight: 400;
+}
+
+.details-info h2 span {
+  font-weight: 300;
+  color: #ff99cc;
+}
+
+.info-tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.tag {
+  padding: 0.25rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.tag.genre {
+  background: linear-gradient(135deg, #ff8008, #ff6600);
+  color: #fff;
+}
+
+.tag.rating {
+  background: linear-gradient(135deg, #ff4e50, #ff0000);
+  color: #fff;
+  font-weight: 400;
+}
+
+.plot {
+  margin: 0.8rem 0;
+  font-style: italic;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 639px) {
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .details-poster img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .details-info {
+    min-width: 100%;
+    padding: 1rem;
+  }
+
+  .details-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .plot {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .overlay {
+    gap: 1rem;
+  }
+
+  .details-poster img {
+    max-width: 240px;
+  }
+
+  .details-info {
+    padding: 1.2rem;
+  }
+}
