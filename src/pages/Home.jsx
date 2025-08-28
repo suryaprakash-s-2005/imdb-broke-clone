@@ -59,7 +59,7 @@ function Home() {
         </button>
       </form>
 
-      <h1 className="home-title">Top Picks Nobody Asked For 😴👻</h1>
+      <h1 className="home-title">Top Picks Nobody Asked For 😴</h1>
 
       {loading ? (
         <div className="loading">
