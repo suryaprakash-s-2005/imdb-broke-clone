@@ -20,8 +20,7 @@ function Favorites() {
 
   return (
     <div className="favorites-empty">
-      <h2>Not a single favorite ? Peak NPC behavior 🤡!</h2>
-      <p>Add something already , this is getting awkward. ☠️</p>
+      <h2>Not a single favorite ? Peak NPC behavior ☠️!</h2>
     </div>
   );
 }

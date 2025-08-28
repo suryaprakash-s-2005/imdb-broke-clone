@@ -49,7 +49,7 @@ function Home() {
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
-          placeholder="Search .... Cuz scrolling blindly is an art 😏"
+          placeholder="search for movies/anime ..."
           className="search-input"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
